@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS Events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    date DATETIME NOT NULL,
+    creator_id INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (group_id) REFERENCES Groups(id)
+    FOREIGN KEY (creator_id) REFERENCES Users(id)
+);

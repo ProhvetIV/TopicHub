@@ -1,0 +1,5 @@
+node_modules/
+dist/
+data.db
+backend/internal/data/data.db
+backend/internal/data/images/*
